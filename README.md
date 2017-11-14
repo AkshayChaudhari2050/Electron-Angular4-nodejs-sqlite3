@@ -8,6 +8,7 @@ and working with angular 4 and electron
 
 npm install
 
+
 ## Now  command use
 
 ng build
