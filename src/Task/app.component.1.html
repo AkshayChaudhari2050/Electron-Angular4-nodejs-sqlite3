@@ -1,0 +1,48 @@
+<!-- <section>
+  <md-toolbar color="primary">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>more_vert</md-icon>
+</button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+    <md-icon>edit</md-icon>
+    <span>Edit Profile</span>
+  </button>
+      <button md-menu-item>
+    <md-icon>share</md-icon>
+    <span>Share Profile</span>
+  </button>
+    </md-menu>
+    <h4 style="margin-left: 30px;">Angular2 Representation App</h4>
+  </md-toolbar>
+</section> -->
+
+
+<section class="container">
+  <div class="one">
+    <!-- <md-card class="example-card"> -->
+      <!-- <md-card-header> -->
+        <div md-card-avatar class="example-header-image"></div>
+        <div>{{owner.name}}</div>
+        <div>{{owner.jobtitle}}</div>
+      <!-- </md-card-header> -->
+      <img md-card-image src="assets/img/avatar.png">
+      <!-- <md-card-content> -->
+        <p>
+          {{owner.name}} is a {{owner.age}} years old {{owner.jobtitle}}, working for {{owner.company}} in {{owner.country}}.
+        </p>
+      <!-- </md-card-content> -->
+    <!-- </md-card> -->
+  </div>
+  <div class="two">
+    <!-- <md-list> -->
+      <h3 md-subheader>Tasks</h3>
+      <section *ngFor="let task of tasks">
+        <!-- <md-icon md-list-icon>timeline</md-icon> -->
+        <h4 md-line>{{task.title}}</h4>
+        <p md-line>{{task.fromDate}} - {{task.toDate}}</p>
+        <p md-line>{{task.description}}</p>
+      </section>
+    <!-- </md-list> -->
+  </div>
+</section>

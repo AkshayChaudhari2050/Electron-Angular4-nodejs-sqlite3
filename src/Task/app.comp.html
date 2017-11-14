@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Book Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="model.title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" required [(ngModel)]="model.author" name="author">
+      </div>
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" class="form-control" id="url" [(ngModel)]="model.url" name="url">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+     </form>
+   </div>

@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row" *ngFor="let student of Students">
+    <table>
+      <thead>
+      <tr>
+        <th>Student grno:</th>
+        <th>studentName:</th>
+        <th>Student Std</th>
+        <th>student Div</th>
+        <button class="destroy" (click)="deleteStudent(student.studentid)">Remove Student</button>
+      </tr>
+      </thead>
+     <tbody>
+      <tr>
+        <td>{{student.grno}}</td>
+        <td>{{student.studentName}}</td>
+        <td>{{student.Std}}</td>
+        <td>{{student.Div}}</td>
+      </tr>
+    </tbody>
+   
+    </table>
+  </div>
+</div>
+
+<div>
+  <label>GRNO:
+    <input #grno />
+  </label>
+  <label>studentName:
+    <input #studentName />
+  </label>
+
+  <label>Std:
+    <input #Std />
+  </label>
+
+  <label>Div:
+    <input #Div />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <!-- <button (click)="add(grno.value,studentName.value,Std,Div);"> -->
+      <button (click)="add(grno.value,studentName.value,Std.value,Div.value);">
+    add
+  </button>
+</div>
+<!-- 
+<form>
+  <h2>Add New student</h2>
+  <p>GRNO:
+    <input type="text" name="grno" [(ngModel)]= "student.grno"/>
+  </p>
+  <p>Name:
+    <input type="text" name="studentName" [(ngModel)]="student.studentName" />
+  </p>
+  <p>Description:
+    <input type="text" name="Std" [(ngModel)]="student.Std" />
+  </p>
+  <p>Price:
+    <input type="text" name="Div" [(ngModel)]="student.Div" />
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary" (click)="addStudent()">Submit</button>
+    <button type="button" class="btn btn-warning" (click)="cancelNewProduct()">Cancel</button> 
+  </p>
+</form> -->
