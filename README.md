@@ -15,3 +15,4 @@ ng build
 ## Now run Command to Open electron app
 
 electron .
+
