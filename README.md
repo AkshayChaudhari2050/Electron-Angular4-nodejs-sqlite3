@@ -13,6 +13,6 @@ npm install
 
 ng build
 
-#now run Command to Open electron app
+# Now run Command to Open electron app
 
 electron .
