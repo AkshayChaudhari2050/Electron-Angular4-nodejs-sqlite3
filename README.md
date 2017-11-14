@@ -6,7 +6,6 @@ and working with angular 4 and electron
 
 ## Now Install All dependencies By command
 
-
 npm install
 
 ## Now  command use
