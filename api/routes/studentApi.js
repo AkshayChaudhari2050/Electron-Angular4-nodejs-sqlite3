@@ -33,9 +33,14 @@ module.exports = (app, db) => {
     })
   })
 
-  app.patch('/api/student/:studentid', (req, res) => {
+  app.put('/api/student/:studentid', (req, res) => {
     const studentid = req.params.studentid;
-    const updates = req.body.updates;
+    const updates = {
+      grno: req.body.grno,
+      studentName: req.body.studentName,
+      Std: req.body.Std,
+      Div: req.body.Div
+    }
     db.Students.find({
         where: {
           studentid: studentid
