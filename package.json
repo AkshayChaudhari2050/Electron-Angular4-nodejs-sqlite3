@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod",
+    "start": "ng build --prodd",
     "serve": "ng serve",
     "build": "node taskapi.js",
     "test": "ng test",
@@ -33,7 +33,7 @@
     "@angular/http": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
-    "@angular/router": "^4.2.4",
+    "@angular/router": "^4.4.6",
     "angular-in-memory-web-api": "^0.5.1",
     "angular-svg-round-progressbar": "^1.1.0",
     "asar": "^0.14.0",
@@ -42,6 +42,8 @@
     "concurrently": "^3.5.0",
     "core-js": "^2.4.1",
     "electron-rebuild": "^1.6.0",
+    "enhanced-resolve": "^3.4.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "jsonwebtoken": "^8.1.0",
     "lite-server": "^2.3.0",
     "lodash": "^4.17.4",
@@ -54,10 +56,11 @@
     "sequelize": "^4.22.5",
     "sqlite3": "^3.1.13",
     "typings": "^2.1.1",
+    "webpack-dev-middleware": "^1.12.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.1",
+    "@angular/cli": "^1.5.2",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "~2.5.53",
@@ -75,6 +78,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "sass-loader": "^6.0.6",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
