@@ -1,0 +1,31 @@
+<p>
+  student-detail works!
+</p>
+
+<div class="container">
+  <div class="row" *ngFor="let student of Students">
+    <table>
+      <thead>
+        <tr>
+          <th>Student grno:</th>
+          <th>studentName:</th>
+          <th>Student Std</th>
+          <th>student Div</th>
+          <button class="destroy" (click)="deleteStudent(student.studentid)">Remove Student</button>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{student.grno}}</td>
+          <td>{{student.studentName}}</td>
+          <a >
+            <span class="badge">{{student.studentid}}</span> {{student.studentName}}
+          </a>
+          <td>{{student.Std}}</td>
+          <td>{{student.Div}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
