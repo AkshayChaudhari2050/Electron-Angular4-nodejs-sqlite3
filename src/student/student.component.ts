@@ -4,11 +4,12 @@ import { Observable } from 'rxjs/Observable';
 import { Student } from './student'
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { StringDecoder } from 'string_decoder';
-
+import { RouterModule, Routes } from '@angular/router';
+import { RouterLink } from '@angular/router';
 @Component({
     selector: 'app-student',
     templateUrl: './student.component.html',
-    providers: [StudentService]
+    providers: [StudentService,RouterModule,RouterLink]
 })
 export class StudentComponent implements OnInit {
 
@@ -17,7 +18,7 @@ export class StudentComponent implements OnInit {
     constructor(private studentService: StudentService, public http: Http) { }
     ngOnInit() {
         this.getStudent()
-    }
+   }
     getStudent() {
         this.studentService.getAllStudent().subscribe(Students => {
             this.Students = Students
@@ -29,14 +30,24 @@ export class StudentComponent implements OnInit {
             .subscribe();
         this.getStudent()
     }
-
-    deleteStudent(studentid:any) {
-        var stud=this.Stud
-        this.studentService.deleteStudent(studentid).subscribe(data=>{
-            if(data.n==1){
-                for(var i=0;i<stud.length;i++){
-                    if(stud[i].studentid==studentid){
-                        stud.slice(i,1)
+    updateData(grno: number, studentName: string, Std: string, Div: string): void {
+        if (!studentName) { return; }
+        this.studentService.updateStudennt({ grno, studentName, Std, Div } as Student)
+            .subscribe();
+        this.getStudent()
+    }
+    studentById(studentid: number) {
+        this.studentService.getStudentById(studentid).subscribe(Students => {
+            this.Students = Students
+        })
+    }
+    deleteStudent(studentid: any) {
+        var stud = this.Stud
+        this.studentService.deleteStudent(studentid).subscribe(data => {
+            if (data.n == 1) {
+                for (var i = 0; i < stud.length; i++) {
+                    if (stud[i].studentid == studentid) {
+                        stud.slice(i, 1)
                     }
                 }
             }

@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Owner } from './owner';
 import { TaskService } from './tasks.service';
 import { Task } from './Task'
-
 @Component({
-    selector: 'app-root',
+    selector: 'app-Task',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     providers: [TaskService]
 })
-export class AppComponent {
+
+export class TaskComponent {
 
     newTask: Task = new Task();
     constructor(private tasksService: TaskService) {
@@ -30,5 +30,6 @@ export class AppComponent {
     }
     updateTask(id:number){
         this.tasksService.updateTaskById(id,Task)
+        console.log("")
     }
 }

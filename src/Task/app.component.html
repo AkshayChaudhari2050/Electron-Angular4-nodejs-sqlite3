@@ -5,7 +5,7 @@
     <input class="new-todo" placeholder="Description" autofocus="" [(ngModel)]="newTask.description" >
     <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTask.title" (keyup.enter)="addTask()"> -->
     <button (click)="addTask()">Add Task</button>
-    <button (click)="updateTask(newTask.id)"></button>
+    <button (click)="updateTask(newTask.id)">updateTask</button>
   </header>
   <section class="main" *ngIf="tasks.length > 0">
     <ul class="todo-list">
@@ -15,7 +15,7 @@
          <h1><label>{{task.title}}</label></h1> 
          <h2><label>{{task.description}}</label></h2>
          <h2><label>{{task.fromDate}}</label></h2>
-          <h2><label>{{task.toDate}}</label></h2>
+         <h2><label>{{task.toDate}}</label></h2>
           <button class="destroy" (click)="removeTask(task)">removeTask</button>
         </div>
       </li>
