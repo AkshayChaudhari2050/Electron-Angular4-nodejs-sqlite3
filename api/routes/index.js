@@ -1,7 +1,7 @@
 
 const routes = [
   require('../routes/studentApi'),
-  // require('./routes/pets')
+  require('../routes/userApi')
 ];
 // Add access to the app and db objects to each route
 module.exports = function router(app, db) {

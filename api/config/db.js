@@ -12,8 +12,9 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.Students = require('../model/student')(sequelize, Sequelize);
+db.users = require('../model/user')(sequelize, Sequelize);
 //  db.owner = require('../owner')(sequelize, Sequelize);
-// db.Users=require('../model/user')(sequelize,Sequelize);
+// db.users = require('../model/user')(sequelize, Sequelize);
 module.exports = db;
 
 sequelize

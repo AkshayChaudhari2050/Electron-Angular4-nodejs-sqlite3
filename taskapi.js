@@ -6,6 +6,7 @@ var app = express();
 var morgan = require('morgan');
 // var student = require('./student')
 var db = require("./api/config/db")
+// headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
   extended: true
