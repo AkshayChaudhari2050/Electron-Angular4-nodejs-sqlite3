@@ -75,17 +75,13 @@ app.use(passport.initialize());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
 // parse application/json
 app.use(bodyParser.json())
-
-
 app.get("/", function (req, res) {
   res.json({
     message: "Express is up!"
   });
 });
-
 app.post('/users', function (req, res) {
   var Users = require('./users');
   Users.Users.create({
